@@ -42,8 +42,7 @@ class SmoothStarRating extends StatelessWidget {
         color: borderColor ?? Theme.of(context).primaryColor,
         size: size,
       );
-    } else if (index > rating - (allowHalfRating ? 0.5 : 1.0) &&
-        index < rating) {
+    } else if (allowHalfRating && index + 0.5 == rating) {
       icon = new Icon(
         halfFilledIconData != null ? halfFilledIconData : Icons.star_half,
         color: color ?? Theme.of(context).primaryColor,
